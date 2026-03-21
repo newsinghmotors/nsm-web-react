@@ -31,7 +31,7 @@ function RedirectHandler() {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter basename="/nsm-web-react">
+    <BrowserRouter basename="/">
       <RedirectHandler />
       <Header />
 
