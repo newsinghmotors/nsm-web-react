@@ -1,5 +1,3 @@
-import { Link } from 'react-router';
-
 import './Home.css';
 import bikeWashImg from './assets/bike wash.jpg';
 import helmetPicImg from './assets/helmet pic.jpg';
