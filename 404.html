@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/nsm-web-react/src/assets/NSM logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Singh Motors - Korba</title>
+    <script>
+      // This script handles 404 errors for client-side routing on GitHub Pages
+      // It redirects 404 errors to index.html so React Router can handle the routing
+      (function() {
+        var pathSegmentsToKeep = 1; // Keep the /nsm-web-react segment
+        var currentPathname = window.location.pathname;
+        var pathSegments = currentPathname.split('/').filter(function(s) { return s !== ''; });
+        
+        if (pathSegments.length > pathSegmentsToKeep) {
+          var redirectPath = '/' + pathSegments.slice(0, pathSegmentsToKeep).join('/');
+          var routePath = '/' + pathSegments.slice(pathSegmentsToKeep).join('/');
+          
+          // Store the route in sessionStorage so index.html can navigate to it
+          sessionStorage.redirect = routePath + window.location.search;
+          window.location.href = redirectPath;
+        }
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
