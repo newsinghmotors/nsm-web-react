@@ -1,10 +1,13 @@
-li,h1,h2,h3,h4,h5{
+ li,h1,h2,h3,h4,h5{
   font-family:Belanosima;
 }
 /*
 p{
   font-family:Spartan;
 } */
+
+
+
 .nav-link {
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
   color: #fff;
@@ -30,6 +33,10 @@ body{
   background-repeat: no-repeat;
 }
 
+.card-img-top{
+  max-height: 500px;
+}
+
 .serv{
   background: transparent;
   border-radius: 0.6rem;
@@ -47,13 +54,44 @@ body{
   box-shadow: 2px 2px 5px rgb(0, 0, 0);
   border-radius: 30px;
   background: #B8B8B8;
-
+  transition: 0.4s;
+  overflow: hidden;
 }
 
 .services .card-body {
-  background: #B8B8B8;
+  background: #696969;
   border-bottom-left-radius: 30px !important;
   border-bottom-right-radius: 30px !important;
+}
+
+.services .card-icon {
+  transform: none;
+  top: 1rem; 
+  right: 1rem;
+  background-color: #d20505;
+  padding: 10px;
+  border-radius: .375rem;
+}
+
+@-webkit-keyframes card-icon {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes card-icon {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .services .card-header {
@@ -65,6 +103,27 @@ body{
 .services .card-header img {
   border-radius: 30px;
 
+}
+
+.services .card-list:hover .card {
+  transform: scale(0.97);
+}
+
+.services .card-list .card:hover {
+  transform: scale(1.03);
+}
+
+.services .card-list .card:hover .card-icon {
+  -webkit-animation: card-icon 0.6s ease-in-out both;
+  animation: card-icon 0.6s ease-in-out both;
+}
+
+.services .card-img {
+  transition: transform 0.4s ease; 
+}
+
+.services .card-list .card:hover .card-img {
+  transform: scale(1.1);
 }
 
 .red-btn{
@@ -179,7 +238,11 @@ body{
   border: 0px;
   background: #B8B8B8;
 }
+.to-transparent {
+  --tw-gradient-to: transparent var(--tw-gradient-to-position);
+}
 
-.card-img-top{
-  max-height: 500px;
+.gradient-mask {
+  -webkit-mask-image: linear-gradient(black, transparent);
+  mask-image: linear-gradient(black, transparent);
 }

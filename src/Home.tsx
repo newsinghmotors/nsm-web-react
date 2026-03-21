@@ -60,7 +60,7 @@ function Home() {
           <div className="col-md-10">
             <div className="card-list row g-0 d-flex" style={{ width: '100%' }}>
               <div className="col-md-4 mt-3 col-sm-10 p-0">
-                <a href="/nsm-web-react/Keys">
+                <a href="/Keys">
                   <div className="card text-center m-2">
                     <div className="card-header p-0">
                       <img src={keyMachineImg} alt="key making machine" style={{ objectFit: 'cover' }} className="card-img gradient-mask w-100" />
@@ -76,7 +76,7 @@ function Home() {
                 </a>
               </div>
               <div className="col-md-4 mt-3 col-sm-10 p-0">
-                <a href="/nsm-web-react/RepairAndServicing">
+                <a href="/RepairAndServicing">
                   <div className="card text-center m-2">
                     <div className="card-header p-0">
                       <img src={repairImg} alt="repair and servicing" style={{ objectFit: 'cover' }} className="card-img gradient-mask w-100" />
@@ -93,7 +93,7 @@ function Home() {
               </div>
 
               <div className="col-md-4 mt-3 col-sm-10 p-0">
-                <a href="/nsm-web-react/Parts">
+                <a href="/Parts">
                   <div className="card text-center m-2">
                     <div className="card-header p-0">
                       <img src={partsImg} alt="2 Wheeler Parts" style={{ objectFit: 'cover' }} className="card-img gradient-mask w-100" />
@@ -109,7 +109,7 @@ function Home() {
                 </a>
               </div>
               <div className="col-md-4 mt-3 col-sm-10 p-0">
-                <a href="/nsm-web-react/Helmets">
+                <a href="/Helmets">
                   <div className="card text-center m-2">
                     <div className="card-header p-0">
                       <img src={helmetImg} alt="Helmets" style={{ objectFit: 'cover' }} className="card-img gradient-mask w-100" />
@@ -126,7 +126,7 @@ function Home() {
               </div>
 
               <div className="col-md-4 mt-3 col-sm-10 p-0">
-                <a href="/nsm-web-react/SensorKeys">
+                <a href="/SensorKeys">
                   <div className="card text-center m-2">
                     <div className="card-header p-0">
                       <img src={keyCloneImg} alt="Remote Cloning" style={{ objectFit: 'cover', mixBlendMode: 'multiply' }} className="card-img gradient-mask w-100" />
@@ -143,7 +143,7 @@ function Home() {
               </div>
 
               <div className="col-md-4 mt-3 col-sm-10 p-0">
-                <a href="/nsm-web-react/Washing">
+                <a href="/Washing">
                   <div className="card text-center m-2">
                     <div className="card-header p-0">
                       <img src={bikeWashImg} alt="bike wash" style={{ objectFit: 'cover' }} className="card-img gradient-mask w-100" />
