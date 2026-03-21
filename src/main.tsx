@@ -1,22 +1,38 @@
-import { StrictMode } from 'react'
+import { StrictMode, useEffect } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route} from 'react-router'
+import { BrowserRouter, Route, Routes, useNavigate } from 'react-router'
 
-import './index.css'
-import Home from './Home.tsx'
-import Keys from './Keys'
-import Header from './Header.tsx'
 import Footer from './Footer.tsx'
-import RepairAndServicing from './RepairAndServicing'
-import Parts from './Parts.tsx'
+import Header from './Header.tsx'
 import Helmets from './Helmets.tsx'
+import Home from './Home.tsx'
+import './index.css'
+import Keys from './Keys'
+import NotFound from './NotFound.tsx'
+import Parts from './Parts.tsx'
+import RepairAndServicing from './RepairAndServicing'
 import SensorKeys from './SensorKeys.tsx'
 import Washing from './Washing.tsx'
-import NotFound from './NotFound.tsx'
+
+// Component to handle 404 redirect navigation
+function RedirectHandler() {
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    const redirect = sessionStorage.getItem('redirect')
+    if (redirect) {
+      sessionStorage.removeItem('redirect')
+      navigate(redirect)
+    }
+  }, [navigate])
+
+  return null
+}
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter basename="/nsm-web-react">
+      <RedirectHandler />
       <Header />
 
       <Routes>
