@@ -19,10 +19,15 @@ function RedirectHandler() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    const redirect = sessionStorage.getItem('redirect')
+    // Check for redirect from 404.html (via query param) or sessionStorage
+    const params = new URLSearchParams(window.location.search)
+    const redirect = params.get('redirect') || sessionStorage.getItem('redirect')
+    
     if (redirect) {
       sessionStorage.removeItem('redirect')
-      navigate(redirect)
+      // Clean up the URL before navigating
+      window.history.replaceState({}, document.title, window.location.pathname.split('?')[0])
+      navigate('/' + redirect)
     }
   }, [navigate])
 
