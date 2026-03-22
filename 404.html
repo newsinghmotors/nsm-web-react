@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Singh Motors - Korba</title>
     <script>
-      // This script handles 404 errors for client-side routing on GitHub Pages
-      // It redirects 404 errors to index.html so React Router can handle the routing
       (function() {
         var l = window.location;
         l.replace(
-          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/index.html?redirect=' + l.pathname.slice(1) + l.search + l.hash
+          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/?redirect=' + l.pathname.slice(1) + l.search + l.hash
         );
       })();
     </script>
